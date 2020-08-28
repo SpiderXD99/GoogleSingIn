@@ -34,7 +34,9 @@ function App() {
   signIn = async () => {
   try {
     await GoogleSignin.hasPlayServices();
+    console.log('playservice')
     const userInfo = await GoogleSignin.signIn();
+    console.log("userinfo")
     setUserInfo(userInfo);
   } catch (error) {
     console.log(error,error.code)
